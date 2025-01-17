@@ -1,11 +1,103 @@
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #343a40;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .navbar-links a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+  }
+  
+  .navbar-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Jumbotron styling */
+  .jumbotron {
+    padding: 2rem;
+    background-color: #e9ecef;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .jumbotron a {
+    color: white;
+    background-color: #007bff;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .jumbotron a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Card container and cards */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap; /* Makes the page responsive */
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  
+  .card {
+    width: 18rem;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 325px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures the image fits nicely */
+  }
+  
+  .card-body {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .card-body .btn {
+    color: white;
+    background-color: #007bff;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .card-body .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #343a40;
+    color: white;
+    margin-top: 2rem;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
