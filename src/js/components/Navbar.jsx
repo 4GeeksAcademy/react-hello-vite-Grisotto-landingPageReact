@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar">
       <a className="navbar-brand" href="#">Start Bootstrap</a>
-      <div className="navbar-links">
+      <button className="hamburger" onClick={toggleMenu}>
+        ☰
+      </button>
+      <div className={`navbar-links ${isMenuOpen ? 'show' : ''}`}>
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Services</a>
